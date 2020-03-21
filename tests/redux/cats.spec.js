@@ -18,7 +18,7 @@ const fakeCats = [
 ]
 
 
-xdescribe('Redux - Cats', () => {
+describe('Redux - Cats', () => {
 
   describe('Initial state', () => {
     it('should have an empty array as the initial state', () => {
@@ -40,7 +40,7 @@ xdescribe('Redux - Cats', () => {
         // we're just giving it an array of strings because we don't care too much about what the
         const loadCatsAction = loadCats(['cat1', 'cat2'])
         expect(loadCatsAction.cats).to.deep.equal(['cat1', 'cat2'])
-
+        
       })
 
     })

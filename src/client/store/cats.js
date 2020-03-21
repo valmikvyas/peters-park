@@ -4,20 +4,26 @@ import axios from 'axios'
 // ACTION TYPES
 // YOU MAKE THEM!!
 
+
+
 // INITIAL STATE
 // what would be a good initial state?
 // :thinking:
-const initialState = null
+const initialState = []
 
 // ACTION CREATORS
 export const loadCats = data => ({
   // some stuff might go in here? hmmmmm.....
+  type: "LOAD_CATS",
+  cats: data
 })
 
 
 // THUNK CREATORS
 export const fetchCats = () => async dispatch => {
   // YOUR CODE HERE
+  const cats = (await axios.get(`/api/cats/`)).data
+  return dispatch(loadCats(cats))
 }
 
 // REDUCER
@@ -25,7 +31,7 @@ export const fetchCats = () => async dispatch => {
 // don't modify what the function takes
 export default function (state = initialState, action) {
   switch (action.type) {
-
+    
 
     default: return state;
   }
