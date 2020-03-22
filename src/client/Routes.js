@@ -12,7 +12,7 @@ const Router = (props) => {
       <Route exact path='/' component={AllCats} />
       <Route exact path="/cats" component={AllCats} />
       <Route exact path="/cats/:catId" component={SingleCat} />
-
+      
     </div>
   )
 }

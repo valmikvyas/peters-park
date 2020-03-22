@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import CatCard from "./CatCard";
+import { fetchCat } from "../store/cats";
 
 // why are we exporting so much stuff you might ask?
 // and I would say good question
@@ -40,7 +41,7 @@ export const mapStateToProps = state => {
 
 export const mapDispatchToProps = dispatch => {
   return {
-    goGetCat: () => dispatch()
+    goGetCat: () => dispatch(fetchCat)
   };
 };
 
