@@ -34,7 +34,7 @@ export class DisconnectedSingleCat extends React.Component {
 
 export const mapStateToProps = state => {
   return {
-    cats: state.cats
+    ...state.cat
   };
 };
 
